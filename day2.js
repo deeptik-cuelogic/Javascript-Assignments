@@ -76,14 +76,13 @@
     var student2 = new Student(2, 'Eliza Marks', 13);
     var student3 = new Student(3, 'Nick Timms', 15);
 
-    Student.prototype.get_details = function(){
-      console.log("Student:" + this.id);
-      console.log("Student Name:" + this.name);
-      console.log("Student Age:" + this.age);
-    }
 
     var student4 = new Student(4, 'Dean Crook', 16);
-    student4.get_details();
+
+    // adding a method to an Object
+    student4.full_name = function(){
+      return this.name + " " + this.name;
+    }
 /*
   3. Write a program that can make the use of 'reserved' keywords in JS without getting any error.
 */
