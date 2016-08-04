@@ -81,25 +81,19 @@ console.log(result); // output is 120
     the  length of array can be dynamic and contain as many values as possible
 */
 
-  function getSeperateArray(arr) {
-    var len = arr.length;
-    var arr1 = [];
-    var count = 0;
+  function getSeperateArray(array) {
+    var len = array.length;
+    var new_arr = [[], []];
     for (i = 0; i < len; i++) {
-      if(count == 0) {
-        arr1[count].push(count);
-        count++;
-      }
-      if(count == 1) {
-        arr1[count].push(count);
-        count--;
-      }
+      var new_digit_arr = array[i].split("")
+      new_arr[0].push(parseInt(new_digit_arr[0]));
+      new_arr[1].push(parseInt(new_digit_arr[1]));
     }
-    console.log(arr1);
+    console.log(new_arr);
   }
-  var arr = ['00','01','11','10','11','06'];
-  getSeperateArray(arr)
 
+  var array = ['00','01','11','10','11','06'];
+  getSeperateArray(array)
 
 
 /* 6. Write a program to do the following:
